@@ -20,6 +20,14 @@ android {
         }
     }
 
+    testOptions {
+        unitTests.all {
+            it.testLogging {
+                events("passed", "skipped", "failed")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
